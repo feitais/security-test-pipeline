@@ -11,7 +11,8 @@ timestamps{
             
         }
         stage('Zap Scan'){
-
+            //sh 'mkdir -p wrk && mv oi-digital.conf wrk/'
+            //sh 'sudo docker run --rm -v $WORKSPACE_OUT/wrk/:/zap/wrk/:rw -t owasp/zap2docker-weekly zap-baseline.py -t $scan_site -c oi-digital.conf -r JENKINS_ZAP_VULNERABILITY_REPORT_${BUILD_ID}.html -m $tempo_max_scan -d'
         }
     }
 }
